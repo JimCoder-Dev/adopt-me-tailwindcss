@@ -32,16 +32,17 @@ class Details extends Component {
       this.state;
 
     return (
-      <div className="details">
+      <div className="p-8 grid gap-12 grid-cols-2">
         <Carousel images={images} />
         <div>
-          <h1>{name}</h1>
-          <h2>
-            {animal} - {breed} - {city}, {state}
+          <h1 className="text-4xl mb-2 font-bold">{name}</h1>
+          <h2 className="mb-2 font-semibold">
+            <span className="bg-yellow-500 p-2 rounded-lg">{animal}</span> - {breed} - {city}, {state}
           </h2>
           <ThemeContext.Consumer>
             {([theme]) => (
               <button
+                className="text-white p-3 mt-4 rounded-lg"
                 onClick={this.toggleModal}
                 style={{ backgroundColor: theme }}
               >
@@ -49,7 +50,7 @@ class Details extends Component {
               </button>
             )}
           </ThemeContext.Consumer>
-          <p>{description}</p>
+          <p className="w-4/5 pt-5">{description}</p>
           {showModal ? (
             <Modal>
               <div>

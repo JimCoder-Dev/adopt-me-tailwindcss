@@ -20,16 +20,17 @@ class Carousel extends Component {
     const { images } = this.props;
     return (
       <div className="carousel">
-        <img src={images[active]} alt="animal" />
-        <div className="carousel-smaller">
+        <img className="rounded-lg" src={images[active]} alt="animal" />
+        <div className="flex py-20">
           {images.map((photo, index) => (
             // eslint-disable-next-line
             <img
+             
               onClick={this.handleIndexClick}
               key={photo}
               src={photo}
               data-index={index}
-              className={index === active ? "active" : ""}
+              className={index === active ? "w-24 opacity-50 rounded-xl mr-8" : "w-24 rounded-full mr-8"}
               alt="animal thumbnail"
             />
           ))}
