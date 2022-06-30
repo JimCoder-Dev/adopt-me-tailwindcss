@@ -42,7 +42,7 @@ class Details extends Component {
           <ThemeContext.Consumer>
             {([theme]) => (
               <button
-                className="text-white p-3 mt-4 rounded-lg"
+                className="text-white p-3 mt-4 rounded-lg hover:opacity-70"
                 onClick={this.toggleModal}
                 style={{ backgroundColor: theme }}
               >
